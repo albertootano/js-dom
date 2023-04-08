@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM básica - Curso Práctico de JavaScript</title>
+</head>
+<body>
+  <h1>Manipulación del DOM básica</h1>
+
+    <form id="formulario">
+
+      <input id="calculo1" placeholder="Escribe algo aquí" />
+      <input id="calculo2" placeholder="Escribe algo aquí" />
+      <button type="button" id="btnCalcular">Calcular</button>
+
+      <p id="result"></p>
+
+   </form>
+
+
+
+
+
+  <script>
+
+    const h1 = document.querySelector('h1');
+    const form = document.querySelector('#formulario');
+    const input1 = document.querySelector('#calculo1');
+    const input2 = document.querySelector('#calculo2');
+    const btn = document.querySelector('#btnCalcular');
+    const pResult = document.querySelector('#result');
+
+    btn.addEventListener('click', sumarInputValues);
+
+    function sumarInputValues(event) {
+      console.log(event);
+      event.preventDefault();
+      const sumaInputs = input1.value + input2.value;
+      pResult.innerText = "Resultado: " + sumaInputs;
+    }
+
+  </script>
+
+
+
+
+
+</body>
+</html>
